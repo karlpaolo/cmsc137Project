@@ -16,7 +16,9 @@ public class ClientHandler implements Runnable {
 		in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 		out = new PrintWriter(client.getOutputStream(),true);
 	}
-
+	public Socket getClient(){
+		return this.client;
+	}
 	@Override
 	public void run() {
 		try {
